@@ -1,4 +1,5 @@
-def test_get_users():
+import requestsd
+ef test_get_users():
     url = "https://reqres.in/api/users?page=1"
     response = requests.get(url)
     assert response.status_code == 200, f"❌ Очікували 200, отримали {response.status_code}"
