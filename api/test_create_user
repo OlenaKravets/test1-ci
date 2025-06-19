@@ -1,0 +1,10 @@
+def test_create_user():
+    payload = {
+        "name": "Olena",
+        "job": "QA Engineer"
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(f"{BASE_URL}/users", json=payload, headers=headers)
+    assert response.status_code in [200, 201], f"❌ Очікували 200/201, отримали {response.status_code}"
